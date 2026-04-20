@@ -23,9 +23,9 @@ const Header = () => {
         </Link>
 
         <div className="flex flex-1 items-center justify-end gap-5">
-          <button aria-label="Аккаунт" className="hidden text-foreground/70 transition-colors hover:text-primary sm:block">
+          <Link to="/auth" aria-label="Аккаунт" className="hidden text-foreground/70 transition-colors hover:text-primary sm:block">
             <User className="h-4 w-4" strokeWidth={1.5} />
-          </button>
+          </Link>
           <Link to="/cart" aria-label="Корзина" className="relative text-foreground/70 transition-colors hover:text-primary">
             <ShoppingBag className="h-4 w-4" strokeWidth={1.5} />
             {count > 0 && (
