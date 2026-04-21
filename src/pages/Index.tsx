@@ -9,16 +9,25 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero — split layout */}
-      <section className="grid min-h-[78vh] grid-cols-1 md:grid-cols-2">
-        <div className="flex items-center bg-card px-8 py-20 md:px-16 lg:px-24">
-          <div className="max-w-md animate-fade-up">
+      {/* Hero — image background with text overlay */}
+      <section className="relative">
+        <img
+          src={hero}
+          alt="Коллекция французской косметики"
+          width={1600}
+          height={1200}
+          className="h-[85vh] w-full object-cover"
+        />
+        {/* Overlay для читаемости текста */}
+        <div className="absolute inset-0 bg-gradient-to-r from-background/90 via-background/70 to-background/20 md:from-background/85 md:via-background/50 md:to-transparent" />
+        <div className="container absolute inset-0 flex items-center">
+          <div className="max-w-xl animate-fade-up">
             <p className="text-[11px] uppercase tracking-wider-2 text-primary">Новая коллекция</p>
             <h1 className="mt-6 font-serif text-5xl leading-[1.05] text-foreground md:text-6xl lg:text-7xl">
               Ритуал красоты <span className="italic text-primary">по-французски</span>
             </h1>
             <div className="mt-8 h-px w-16 bg-primary" />
-            <p className="mt-8 text-base leading-relaxed text-muted-foreground">
+            <p className="mt-8 max-w-md text-base leading-relaxed text-foreground/80">
               Безупречные формулы, разработанные в Париже. Концентрированный уход для естественного сияния кожи.
             </p>
             <div className="mt-10 flex flex-wrap items-center gap-6">
@@ -36,15 +45,6 @@ const Index = () => {
               </Link>
             </div>
           </div>
-        </div>
-        <div className="relative overflow-hidden">
-          <img
-            src={hero}
-            alt="Коллекция французской косметики"
-            width={1200}
-            height={1600}
-            className="h-full min-h-[60vh] w-full object-cover md:min-h-[78vh]"
-          />
         </div>
       </section>
 
