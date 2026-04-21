@@ -23,8 +23,8 @@ const Index = () => {
         <div className="container absolute inset-0 flex items-center">
           <div className="max-w-xl animate-fade-up">
             <p className="text-[11px] uppercase tracking-wider-2 text-primary">Новая коллекция</p>
-            <h1 className="mt-6 font-serif text-5xl leading-[1.05] text-foreground md:text-6xl lg:text-7xl">
-              Ритуал красоты <span className="italic text-primary">по-французски</span>
+            <h1 className="mt-6 font-sans text-4xl font-light leading-[1.1] text-foreground md:text-5xl lg:text-6xl">
+              Ритуал красоты <span className="text-primary">по-французски</span>
             </h1>
             <div className="mt-8 h-px w-16 bg-primary" />
             <p className="mt-8 max-w-md text-base leading-relaxed text-foreground/80">
