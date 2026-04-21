@@ -9,32 +9,42 @@ const Index = () => {
 
   return (
     <Layout>
-      {/* Hero */}
-      <section className="relative">
-        <img
-          src={hero}
-          alt="Коллекция французской косметики"
-          width={1600}
-          height={1200}
-          className="h-[78vh] w-full object-cover"
-        />
-        <div className="absolute inset-0 bg-gradient-to-r from-background/70 via-background/30 to-transparent" />
-        <div className="container absolute inset-0 flex items-center">
-          <div className="max-w-lg animate-fade-up">
+      {/* Hero — split layout */}
+      <section className="grid min-h-[78vh] grid-cols-1 md:grid-cols-2">
+        <div className="flex items-center bg-card px-8 py-20 md:px-16 lg:px-24">
+          <div className="max-w-md animate-fade-up">
             <p className="text-[11px] uppercase tracking-wider-2 text-primary">Новая коллекция</p>
-            <h1 className="mt-4 font-serif text-5xl leading-tight text-foreground md:text-6xl">
-              Ритуал красоты по-французски
+            <h1 className="mt-6 font-serif text-5xl leading-[1.05] text-foreground md:text-6xl lg:text-7xl">
+              Ритуал красоты <span className="italic text-primary">по-французски</span>
             </h1>
-            <p className="mt-5 text-base leading-relaxed text-muted-foreground">
+            <div className="mt-8 h-px w-16 bg-primary" />
+            <p className="mt-8 text-base leading-relaxed text-muted-foreground">
               Безупречные формулы, разработанные в Париже. Концентрированный уход для естественного сияния кожи.
             </p>
-            <Link
-              to="/shop"
-              className="mt-8 inline-block border border-primary px-10 py-3 text-[11px] uppercase tracking-wider-2 text-primary transition-colors hover:bg-primary hover:text-primary-foreground"
-            >
-              Открыть каталог
-            </Link>
+            <div className="mt-10 flex flex-wrap items-center gap-6">
+              <Link
+                to="/shop"
+                className="inline-block border border-primary bg-primary px-10 py-3 text-[11px] uppercase tracking-wider-2 text-primary-foreground transition-colors hover:bg-transparent hover:text-primary"
+              >
+                Открыть каталог
+              </Link>
+              <Link
+                to="/shop"
+                className="text-[11px] uppercase tracking-wider-2 text-foreground underline-offset-4 hover:underline"
+              >
+                Узнать больше →
+              </Link>
+            </div>
           </div>
+        </div>
+        <div className="relative overflow-hidden">
+          <img
+            src={hero}
+            alt="Коллекция французской косметики"
+            width={1200}
+            height={1600}
+            className="h-full min-h-[60vh] w-full object-cover md:min-h-[78vh]"
+          />
         </div>
       </section>
 
