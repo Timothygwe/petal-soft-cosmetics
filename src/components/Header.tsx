@@ -42,10 +42,6 @@ const Header = () => {
           {[
             { to: "/", label: "Главная" },
             { to: "/shop", label: "Каталог" },
-            { to: "/shop?cat=Сыворотки", label: "Сыворотки" },
-            { to: "/shop?cat=Кремы", label: "Кремы" },
-            { to: "/shop?cat=Тоники", label: "Тоники" },
-            { to: "/shop?cat=Очищение", label: "Очищение" },
           ].map((l) => (
             <li key={l.label}>
               <NavLink
