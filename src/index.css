@@ -2,54 +2,51 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Cosmetics boutique — inspired by Biologique Recherche
-   Warm cream background, deep burgundy accent, refined serif typography. */
+/* Cosmetics boutique — cream & sky blue palette */
 
-@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600&family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500;600&display=swap');
 
 @layer base {
   :root {
     --background: 36 33% 94%;
-    --foreground: 0 35% 18%;
+    --foreground: 215 35% 18%;
 
     --card: 36 40% 97%;
-    --card-foreground: 0 35% 18%;
+    --card-foreground: 215 35% 18%;
 
     --popover: 36 40% 97%;
-    --popover-foreground: 0 35% 18%;
+    --popover-foreground: 215 35% 18%;
 
-    --primary: 350 55% 28%;
+    --primary: 205 65% 50%;
     --primary-foreground: 36 40% 97%;
 
-    --secondary: 30 25% 88%;
-    --secondary-foreground: 0 35% 18%;
+    --secondary: 200 35% 88%;
+    --secondary-foreground: 215 35% 18%;
 
     --muted: 32 20% 90%;
-    --muted-foreground: 20 15% 40%;
+    --muted-foreground: 215 15% 38%;
 
-    --accent: 12 45% 60%;
-    --accent-foreground: 36 40% 97%;
+    --accent: 205 70% 75%;
+    --accent-foreground: 215 35% 18%;
 
     --destructive: 0 65% 45%;
     --destructive-foreground: 36 40% 97%;
 
-    --border: 30 20% 82%;
-    --input: 30 20% 82%;
-    --ring: 350 55% 28%;
+    --border: 200 25% 82%;
+    --input: 200 25% 82%;
+    --ring: 205 65% 50%;
 
     --radius: 0.25rem;
 
-    /* Brand tokens */
     --cream: 36 33% 94%;
     --cream-light: 36 40% 97%;
-    --burgundy: 350 55% 28%;
-    --burgundy-deep: 350 60% 20%;
-    --terracotta: 12 45% 60%;
-    --ink: 0 35% 18%;
+    --sky: 205 65% 50%;
+    --sky-soft: 205 70% 85%;
+    --ink: 215 35% 18%;
 
-    --gradient-hero: linear-gradient(135deg, hsl(36 40% 97%) 0%, hsl(30 25% 88%) 100%);
-    --shadow-soft: 0 8px 30px -12px hsl(0 35% 18% / 0.15);
-    --shadow-card: 0 4px 20px -8px hsl(0 35% 18% / 0.1);
+    --gradient-hero: linear-gradient(135deg, hsl(36 40% 97%) 0%, hsl(200 35% 88%) 100%);
+    --shadow-soft: 0 8px 30px -12px hsl(215 35% 18% / 0.15);
+    --shadow-card: 0 4px 20px -8px hsl(215 35% 18% / 0.1);
 
     --transition-smooth: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 
@@ -71,13 +68,13 @@
 
   body {
     @apply bg-background text-foreground;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Jost', sans-serif;
     font-weight: 300;
     letter-spacing: 0.01em;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
     font-weight: 400;
     letter-spacing: 0.005em;
   }
@@ -85,10 +82,10 @@
 
 @layer utilities {
   .font-serif {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: 'Playfair Display', serif;
   }
   .font-sans {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Jost', sans-serif;
   }
   .tracking-wider-2 {
     letter-spacing: 0.2em;
